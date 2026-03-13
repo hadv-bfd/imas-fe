@@ -10,15 +10,15 @@ import {
 import { DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { PostFormModal } from "../components/posts/PostFormModal";
-import type { PostItem, PostPayload } from "../common/types/post";
-import { queryKeys } from "../constants/queryKeys";
+import { PostFormModal } from "./components/PostFormModal";
+import type { PostItem, PostPayload } from "../../common/types/post";
+import { queryKeys } from "../../constants/queryKeys";
 import {
   createPost,
   deletePost,
   getPosts,
   updatePost,
-} from "../services/api/postsApi";
+} from "../../services/api/postsApi";
 
 export function PostsPage() {
   const queryClient = useQueryClient();

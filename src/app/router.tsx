@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/common/ProtectedRoute";
 import { MainLayout } from "../layouts/MainLayout";
-import { DashboardPage } from "../pages/DashboardPage";
-import { LoginPage } from "../pages/LoginPage";
-import { PostsPage } from "../pages/PostsPage";
+import { DashboardPage } from "../pages/DashboardPage/DashboardPage";
+import { LoginPage } from "../pages/LoginPage/LoginPage";
+import { PostsPage } from "../pages/PostsPage/PostsPage";
 
 export function AppRouter() {
   return (

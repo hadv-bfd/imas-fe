@@ -1,6 +1,6 @@
 import { Button, Form, Input, Modal } from "antd";
 import { useEffect } from "react";
-import type { PostItem, PostPayload } from "../../common/types/post";
+import type { PostItem, PostPayload } from "../../../common/types/post";
 
 type Props = {
   open: boolean;
