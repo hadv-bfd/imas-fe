@@ -1,7 +1,7 @@
 import { Spin } from "antd";
 import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { useAuth } from "../../common/contexts/AuthContext";
+import { useAuth } from "../../common/contexts/useAuth";
 
 type Props = {
   children: ReactNode;
@@ -20,7 +20,7 @@ export function ProtectedRoute({ children }: Props) {
   }
 
   //   if (!isAuthenticated) {
-  //     return <Navigate to="/login" state={{ from: location.pathname }} replace />
+  //     return <Navigate to="/login" state={{ from: location.pathname }} replace />;
   //   }
 
   return <>{children}</>;

@@ -1,19 +1,9 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { KeycloakProfile } from "keycloak-js";
 import { keycloak, keycloakEnabled } from "../../services/auth/keycloak";
 import { setApiAuthToken } from "../../services/api/client";
-
-type AuthContextValue = {
-  ready: boolean;
-  isAuthenticated: boolean;
-  keycloakEnabled: boolean;
-  profile: KeycloakProfile | null;
-  login: () => Promise<void>;
-  logout: () => Promise<void>;
-};
-
-const AuthContext = createContext<AuthContextValue | undefined>(undefined);
+import { AuthContext } from "./auth-context";
 
 type Props = {
   children: ReactNode;
@@ -116,14 +106,4 @@ export function AuthProvider({ children }: Props) {
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
-
-export function useAuth() {
-  const context = useContext(AuthContext);
-
-  if (!context) {
-    throw new Error("useAuth must be used inside AuthProvider");
-  }
-
-  return context;
 }

@@ -1,6 +1,6 @@
 import { Button, Card, Typography } from "antd";
 import { Navigate, useLocation } from "react-router-dom";
-import { useAuth } from "../common/contexts/AuthContext";
+import { useAuth } from "../common/contexts/useAuth";
 
 export function LoginPage() {
   const location = useLocation();
