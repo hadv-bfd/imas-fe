@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { KeycloakProfile } from "keycloak-js";
-import { keycloak, keycloakEnabled } from "../../services/auth/keycloak";
-import { setApiAuthToken } from "../../services/api/client";
+import { keycloak, keycloakEnabled } from "../../../services/auth/keycloak";
+import { setApiAuthToken } from "../../../services/api/client";
 import { AuthContext } from "./auth-context";
 
 type Props = {

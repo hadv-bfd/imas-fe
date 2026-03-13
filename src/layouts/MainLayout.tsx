@@ -2,7 +2,7 @@ import { Button, Layout, Menu, Typography } from "antd";
 import { HomeOutlined, LogoutOutlined, ReadOutlined } from "@ant-design/icons";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useMemo } from "react";
-import { useAuth } from "../common/contexts/useAuth";
+import { useAuth } from "../common/contexts/auth/useAuth";
 
 const { Header, Content, Sider } = Layout;
 

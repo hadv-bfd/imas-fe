@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { AuthProvider } from "../../common/contexts/AuthContext";
+import { AuthProvider } from "../../common/contexts/auth/AuthContext";
 
 type Props = {
   children: ReactNode;

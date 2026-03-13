@@ -1,7 +1,7 @@
 import { Spin } from "antd";
 import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { useAuth } from "../../common/contexts/useAuth";
+import { useAuth } from "../../common/contexts/auth/useAuth";
 
 type Props = {
   children: ReactNode;
